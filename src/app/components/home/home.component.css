@@ -1,26 +1,107 @@
-.home {
+/* Base styling */
+:host {
+    display: block;
+    background-color: #0a192f; /* deep dark blue */
+    color: #ccd6f6; /* light bluish text */
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
     text-align: center;
-    padding: 80px 20px;
-    background: #f0f4f8;
   }
-  .home h1 {
+  
+  .text-content h1 {
     font-size: 2.5rem;
-    margin-bottom: 10px;
+    color: #64ffda; /* highlight green */
+    margin-bottom: 0.5rem;
   }
-  .home p {
+  
+  .text-content .tagline {
     font-size: 1.2rem;
-    color: #555;
+    color: #8892b0;
   }
-  .home a {
-    margin-top: 20px;
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: #007bff;
-    color: white;
+  
+  .intro {
+    margin: 1rem 0;
+    max-width: 600px;
+    line-height: 1.6;
+    color: #ccd6f6;
+  }
+  
+  .cta-buttons {
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .cta-buttons .btn {
+    background-color: #64ffda;
+    color: #0a192f;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
     text-decoration: none;
-    border-radius: 5px;
+    transition: background 0.3s;
   }
-  .home a:hover {
-    background-color: #0056b3;
+  
+  .cta-buttons .btn:hover {
+    background-color: #52e0c4;
+  }
+  
+  .cta-buttons .btn.alt {
+    background-color: transparent;
+    color: #64ffda;
+    border: 2px solid #64ffda;
+  }
+  
+  .cta-buttons .btn.alt:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+  }
+  
+  .tech-stack img {
+    height: 40px;
+    margin: 0.5rem;
+    filter: brightness(0) invert(1); /* makes icons whiteish */
+  }
+  
+  .social-links {
+    margin-top: 1rem;
+  }
+  
+  .social-links a {
+    margin: 0 1rem;
+    color: #64ffda;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .social-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .profile-pic-container {
+    margin-top: 2rem;
+  }
+  
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #64ffda;
+    object-fit: cover;
   }
   

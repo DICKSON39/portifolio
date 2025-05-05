@@ -1,5 +1,20 @@
 <section class="contact">
-    <h2>Get in Touch</h2>
+    <p class="contact-intro">
+        Got a project, idea, or just wanna say hi? I’m always down to connect.
+      </p>
+    
+      <form class="contact-form" (submit)="sendEmail($event)">
+        <input type="text" placeholder="Your Name" [(ngModel)]="formData.name" name="name" required />
+        <input type="email" placeholder="Your Email" [(ngModel)]="formData.email" name="email" required />
+        <textarea placeholder="Your Message" [(ngModel)]="formData.message" name="message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div *ngIf="messageSent" class="success-popup">
+        <p>Message Sent Successfully! 🎉</p>
+      </div>
+      
+      
     <p>Email: <a href="mailto:you&#64;example.com">dicksonndumia19&#64;gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/your-username" target="_blank">DICKSON39</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/your-profile" target="_blank">Dickson ndumia</a></p>
