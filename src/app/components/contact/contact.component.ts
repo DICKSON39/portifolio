@@ -19,10 +19,13 @@ export class ContactComponent {
   sendEmail(e: Event) {
     e.preventDefault();
 
+    const currentTime = new Date().toLocaleString();
+
     emailjs.send('service_0d9cmjp', 'template_vugjb3m', {
       from_name: this.formData.name,
       reply_to: this.formData.email,
-      message: this.formData.message
+      message: this.formData.message,
+      time: currentTime
     }, '5reVtycikPcU8tboq')
     .then(() => {
       this.messageSent = true;
